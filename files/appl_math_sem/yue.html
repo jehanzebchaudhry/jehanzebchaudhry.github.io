@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<b>Speaker:</b> Dr. Yue Yu (Lehigh University)
+
+<BR>
+<BR>
+
+<b>Title:</b>Two Multiscale/Multiphysics Problems in Modeling Bioprosthetic Heart Valves (BHVs) Damage
+
+<BR>
+<BR>
+
+<b>Abstract:</b>
+<p>Bioprosthetic heart valves (BHVs) are the most popular artificial replacements for diseased valves that mimic the structure of native valves. However, the life span of BHVs remains limited to 10-15 years, and the mechanisms that underlie BHVs failure remain poorly understood. Therefore, developing a unifying mathematical framework which captures material damage phenomena in the fluid-structure interaction environment would be extremely valuable for studying BHVs failure. Specifically, in this framework the computational domain is composed of three subregions: the fluid (blood) , the fracture structure (damaged BHVs) modeled by the recently developed nonlocal (peridynamics) theory, and the undamaged thin structure (undamaged BHVs). These three subregions are numerically coupled to each other with proper interface boundary conditions.
+
+In this talk, I will introduce two multiscale/multiphysics problems and the corresponding numerical methods in this framework. In the first problem the coupling strategy for fluid and thin structure is investigated. This problem presents unique challenges due to the large deformation of BHV leaflets, which causes dramatic changes in the fluid subdomain geometry and difficulties on the traditional conforming coupling methods. To overcome the challenge, the immersogemetric method was developed where the fluid and thin structure are discretized separately and coupled through penalty forces. To ensure the capability of the developed method in modeling BHVs, we have verified and validated this method. The second part focuses on developing a peridynamic formulation and numerical methods to capture the evolving fluid-induced material damage. With the presence of evolving fractures, a priori unknown damage location often render consistent treatment difficult. Moreover, in peridynamics and other nonlocal models the loading boundary conditions should be defined in a nonlocal way, while in fluid--structure interfaces the hydrodynamic loadings from the fluid side are typically provided on a sharp surface. To overcome these challenges, we have proposed a new meshfree formulation for state-based peridynamics which provides a consistent treatment of evolving fracture surface and applying nonhomogeneous traction loadings for state-based peridynamics. We provide rigorous error analysis and demonstrate convergence for a number of benchmarks, and validate simulations of brittle fracture against a recent experiment of dynamic crack branching, providing evidence that the scheme improves prediction accuracy for practical engineering problems.</p>
+
+</body>
+</html>

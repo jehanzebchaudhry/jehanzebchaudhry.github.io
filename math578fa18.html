@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Math 578 - Fall 2018</title>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1 ALIGN=CENTER>MATH 578: Numerical Partial Differential Equations
+</h1>
+
+<HR WIDTH="100%"><BR>
+<B>Time and Place:</B> MWF 1400  - 1450, DSH-318
+<BR>
+<B>Instructor:</B> Jehanzeb H. Chaudhry (Zeb),
+jehanzeb@unm.edu, 
+<a href= "index.html"> jehanzebchaudhry.github.io</a>
+<BR>
+<B>Office Hours:</B> Tuesday: 1100 - 1200, Thursday: 1100 - 1300 (SMLC 310)
+<BR>
+<BR>
+<BR>
+
+
+<B>Texts Recommended (not required):</B> 
+        
+   <ul>
+
+
+  <li> Introduction to Computational PDEs. Notes by by de Sterck, Ullrich. 
+  <a href="http://www.math.uwaterloo.ca/~hdesterc/websiteW/teaching/AM442CM452.pdf" role="button">link to pdf</a></li>
+ 
+
+<li>Finite Difference Methods for Ordinary and Partial Differential Equations: Steady-State and Time-Dependent Problems, by LaVeque  <a href="http://epubs.siam.org/doi/book/10.1137/1.9780898717839">SIAM</a></li>
+
+<li>  Finite Elements: Theory, Fast Solvers, and Applications in Solid Mechanics, by Braess<a href="http://ebooks.cambridge.org/ebook.jsf?bid=CBO9780511618635">Cambridge</a></li>
+
+</ul>
+
+<h4>Other recommended texts:</h4>
+
+  <h4>*  Finite Difference Methods</h4>
+  <ul>
+
+<li>Numerical Solution of Partial Differential Equations, by Morton and Mayers
+ <a href="http://www.cambridge.org/us/academic/subjects/mathematics/numerical-analysis/numerical-solution-partial-differential-equations-introduction-2nd-edition"> Cambridge</a></li>
+
+ <li>Finite Difference Schemes and Partial Differential Equations, by Strikwerda
+ <a href="https://epubs.siam.org/doi/book/10.1137/1.9780898717938"> SIAM</a></li>
+
+
+</ul>
+
+<h4>*  Finite Volume Methods</h4>
+
+<ul>
+  <li>Finite Volume Methods for Hyperbolic Problems, by LeVeque <a  href="http://www.cambridge.org/us/academic/subjects/mathematics/numerical-analysis/finite-volume-methods-hyperbolic-problems?format=PB" role="button">SIAM</a></li>
+
+</ul>
+
+
+<h4>*  Finite Element Methods</h4>
+
+<ul>
+
+
+  <li>The Mathematical Theory of Finite Element Methods, Third edition, by Brenner and Scott <a  href="http://www.springer.com/mathematics/applications/book/978-0-387-75933-3" role="button">Springer</a></li>
+
+
+  <li>Numerical Solution of Partial Differential Equations by the Finite Element Method, by Johnson <a href="http://store.doverpublications.com/048646900x.html">Dover</a></li>
+
+  <li>TTheory and Practice of Finite Elements, by Ern and Guermond <a  href="https://www.springer.com/us/book/9780387205748" role="button">Springer</a></li>
+
+</ul>
+
+
+
+ <BR>
+<B>Prerequisites:</B> Math 463/513, Math 504, Math 505
+<BR>
+</P>
+
+<DL>
+<P><B>Course Description:</B> &nbsp;
+This course covers the basics of finite difference schemes, finite volume schemes, and finite element
+methods. Additional topics (e.g. a posteriori error estimation, discontinuous Galerkin methods, etc) may be covered based on student interest and time constraints. You do not need to be an expert in PDEs or in coding. But you should have a course in numerical analysis
+as your background, be comfortable with differential equations, and have some coding experience. We'll be covering numerical methods for parabolic, hyperbolic and elliptic equations. We'll discuss the mathematical background of the numerical methods as well as its implementation. </P>
+
+<BR>
+<P><B> Computation </B>
+
+<BR> <h4>*Programming Languages</h4>
+Python is the preferred programming language for this course. You may also use C++. If you want to use another programming language, please talk to me to figure out its utility for completeing the homeworks. While theoretically, any programming language (or a computing environment like MATLAB) may be used for this course, however some of the later finite element homeworks will be much easier in Python (or C++).
+Python has a very gentle learning curve, so you should feel at home even if you've never done any work in Python. 
+
+
+<BR> <h4>*Jupyter Notebooks and Python</h4>
+
+I'll be using <a href="http://jupyter.org"> Jupyter Notebook </a> with Python for the examples in class. The Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. The in-class examples will use the Matplotlib library for plotting and displaying graphics.
+
+<BR> 
+
+<BR> Jupyter Noteboook, though sufficient for this course, does not have the best interface. The recently developed <a href="https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html">JupyterLab</a> enables you to work with documents and activities such as Jupyter notebooks, text editors, terminals, and custom components in a flexible, integrated, and extensible manner. 
+
+
+<BR> <h4>*Jupyter Notebooks, Python and Numpy Help</h4>
+<ul>
+<li>Python tutorial <a href="ttps://docs.python.org/3/tutorial/index.html">(https://docs.python.org/3/tutorial/index.html)</a></li>
+
+<li>Dive into Python 3 <a href="http://www.diveinto.org/python3/">(http://www.diveinto.org/python3/)</a></li>
+
+<li>The Numpy User Guide <a href="http://web.mit.edu/dvp/Public/numpybook.pdf">(http://web.mit.edu/dvp/Public/numpybook.pdf) </a>by Travis Oliphant</li>
+
+<li>Numpy/Scipy documentation <a href="http://docs.scipy.org/doc/">(http://docs.scipy.org/doc/)</a></li>
+
+<li>Jupyter Notebook tutorial <a href="https://www.dataquest.io/blog/jupyter-notebook-tutorial/">https://www.dataquest.io/blog/jupyter-notebook-tutorial</a></li>
+
+<li> Matplotlib  <a href="https://matplotlib.org">https://matplotlib.org</a></li>
+
+</ul>
+
+<BR> <h4>*FEniCS</h4>
+
+We'll be using the Finite Element package Dolfin from the <a href="https://fenicsproject.org/index.html"> FEniCS Project</a> for the second half of the course.
+
+</P>
+
+
+
+
+<P>
+<BR> <h4>*Computing Environment and Virtual Machine</h4>
+I expect all of you to be able to setup a working python envrionment with Jupyter Notebook and be able to run FEniCS using the instrustions on the project websites. However, if you run into difficulty, the following <a href="https://www.virtualbox.org">virtualbox</a> VM image will work out of the box.
+<a href= "files/teaching/fa18/math578/pdegeeks.ova">Virtual Box Image</a> Username: mathgeeks  Password: abc123
+</P>
+
+
+
+
+<P><B>Grading:</B> &nbsp;
+<BR> 45% Homework
+<BR> 45% Projects
+<BR> 10% Participation
+
+</P>
+
+
+<P><B>Homeworks:</B> 
+  <ul>
+    <li>
+      Homework 1 &nbsp; <a href="files/teaching/fa18/math578/hw1_updated.ipynb"> Notebook </a> &nbsp;
+      <a href="files/teaching/fa18/math578/hw1.pdf">PDF </a>&nbsp;
+      Posted Aug 31. Due Sept 14
+    </li>
+
+    <li>
+      Homework 2 &nbsp; <a href="files/teaching/fa18/math578/HW2.ipynb"> Notebook </a> &nbsp;
+      <a href="files/teaching/fa18/math578/HW2.pdf">PDF </a>&nbsp;
+      Posted Sept 14. Due Sept 26
+    </li>
+
+    <li>
+      Homework 3
+      <a href="files/teaching/fa18/math578/HW3.pdf">PDF </a>&nbsp;
+      Posted Sept 29. Due Oct 17
+    </li>
+
+    <li>
+      Homework 4
+      <a href="files/teaching/fa18/math578/HW4.pdf">PDF </a>&nbsp;
+      Posted Oct 26. Due Nov 5
+    </li>
+
+
+  <li> Homework 5<a href= "files/teaching/fa18/math578
+/HW5.pdf">PDF </a> Due:  November 21 &nbsp;
+<a href= "files/teaching/fa18/math578/elements.dat">elements.dat</a>&nbsp;
+<a href= "files/teaching/fa18/math578/vertices.dat">vertices.dat</a>&nbsp;
+<a href= "files/teaching/fa18/math578/dom.xml">dom.xml</a>&nbsp;
+<a href= "files/teaching/fa18/math578/dom_physical_region.xml">dom_physical_region.xml</a>
+</li>
+
+
+  </ul>
+
+
+</P>
+
+<BR> 
+<P><B>Projects:</B> </P>
+
+
+<B>Midterm Project</B> has been posted on UNM Learn
+
+<BR>
+<B>Final Project</B> has been posted on UNM Learn
+
+
+
+<P><B><a href= "files/teaching/fa18/math578/Syllabus_578.pdf">Syllabus PDF</a></B>   
+ &nbsp;
+  <a href= "files/teaching/fa18/math578/syllabus.ipynb">Syllabus Jupyter Notebook</a>
+ &nbsp; (View using <a href= "http://nbviewer.jupyter.org">nbviewer</a> or downloading it locally on your machine and running Jupyter notebooks)
+</P>
+
+<P>
+<BR> <h4>Sample files/ Class Examples</h4>
+<a href= "files/teaching/fa18/math578/numpy_matplot_notebook.ipynb">Numpy matplotlib notebook</a> &nbsp;
+
+  <BR><a href= "files/teaching/fa18/math578/1d_poisson.ipynb">1D Poisson Finite Difference Example</a> &nbsp;
+
+  <BR><a href= "files/teaching/fa18/math578/parabolic_forward_euler.ipynb">Heat equation using Finite Difference</a> &nbsp;
+
+
+  <BR><a href= "files/teaching/fa18/math578/MOL.ipynb">Heat equation using Method of Lines</a> &nbsp;
+
+  <BR><a href= "files/teaching/fa18/math578/fem_1d.ipynb">1D Poisson's equation using FEM</a> &nbsp;
+
+  <BR><a href= "files/teaching/fa18/math578/1d_fem_dolfin.py">1D Poisson's equation using Fenics</a>.
+  Download the mesh file and run as: python3 1d_fem_dolfin.py. &nbsp;
+  <a href= "files/teaching/fa18/math578/1dmesh.xml">1D Mesh</a>. &nbsp;
+  Use <a href= "https://www.paraview.org">this</a> software to view the output.&nbsp;
+
+
+
+</P>
+
+<!-- <P><B>Handwritted and probably illegible notes:</B> 
+
+</P>
+ -->
+
+<!-- <P>
+<BR> <h4>
+<a name="finalproject">Final Project Presentations: December x</a>
+</h4>
+
+
+</P> -->
+
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+</body>
+</html>
