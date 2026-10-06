@@ -1,0 +1,24 @@
+# Site-wide settings. Edit these to change the name, title or contact
+# details that appear on every page.
+
+title: Jehanzeb H. Chaudhry
+description: Jehanzeb H. Chaudhry, Department of Mathematics and Statistics, University of New Mexico. Numerical methods for partial differential equations, a posteriori error estimation and uncertainty quantification.
+
+author:
+  name: Jehanzeb H. Chaudhry
+  position: Associate Professor of Mathematics and Statistics
+  department: Department of Mathematics and Statistics
+  institution: University of New Mexico
+  # Email is split in two so it isn't plain text in the page source.
+  email_user: jehanzeb
+  email_domain: unm.edu
+  address:
+    - Dept of Mathematics and Statistics
+    - University of New Mexico
+    - 310 SMLC
+    - Albuquerque, NM 87131
+
+# Files that are part of the repository but shouldn't be published.
+exclude:
+  - README.md
+  - files/backup_research.txt

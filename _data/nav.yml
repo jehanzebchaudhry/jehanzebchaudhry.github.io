@@ -1,0 +1,13 @@
+# The menu shown on every page, in order.
+# To add a tab, add two lines (title and url). To remove one, delete its two lines.
+
+- title: Home
+  url: /
+- title: Research
+  url: /files/research.html
+- title: Teaching
+  url: /files/teaching.html
+- title: Publications
+  url: /files/publications.html
+- title: Presentations
+  url: /files/presentations.html

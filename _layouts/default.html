@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.author.name }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <meta name="author" content="{{ site.author.name }}">
+  <link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-name" href="/">{{ site.author.name }}</a>
+    <div class="site-tagline">{{ site.author.position }}</div>
+  </div>
+</header>
+
+<div class="wrap page">
+
+  <nav class="site-nav" aria-label="Main menu">
+    <ul>
+      {% for item in site.data.nav %}
+      <li><a href="{{ item.url }}"{% if page.url == item.url %} class="current" aria-current="page"{% endif %}>{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+
+  <main class="content">
+{{ content }}
+  </main>
+
+  <aside class="profile">
+    <img src="/files/jehanzeb.jpg" alt="Photo of {{ site.author.name }}" width="194" height="194">
+    <p class="profile-name">{{ site.author.name }}</p>
+    <p class="profile-role">{{ site.author.position }}</p>
+
+    <h3>Contact</h3>
+    <p><a class="email" data-user="{{ site.author.email_user }}" data-domain="{{ site.author.email_domain }}" href="#">{{ site.author.email_user }} [at] {{ site.author.email_domain | replace: '.', ' [dot] ' }}</a></p>
+
+    <h3>Mailing address</h3>
+    <p>
+      {% for line in site.author.address %}{{ line }}<br>{% endfor %}
+    </p>
+
+    <h3>Elsewhere</h3>
+    <p>
+      {% for link in site.data.profiles %}<a href="{{ link.url }}">{{ link.title }}</a><br>{% endfor %}
+    </p>
+  </aside>
+
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <a href="/">{{ site.author.name }}</a> &middot; {{ site.author.department }}, {{ site.author.institution }}
+  </div>
+</footer>
+
+<script>
+  // Build the email link in the browser so the address isn't plain text in the page source.
+  document.querySelectorAll('a.email').forEach(function (a) {
+    var addr = a.dataset.user + '@' + a.dataset.domain;
+    a.href = 'mailto:' + addr;
+    a.textContent = addr;
+  });
+</script>
+</body>
+</html>
