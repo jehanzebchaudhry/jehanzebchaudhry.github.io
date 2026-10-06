@@ -2,7 +2,7 @@
 %
 % Fields used: author, title, journal / booktitle, volume, number, pages,
 % year, url (publisher page), eprint + archiveprefix (arXiv preprint),
-% note (status of preprints and theses), keywords.
+% note (status of preprints and theses), keywords, category.
 %
 % keywords = research area(s) on the website's Research page:
 %   error-estimation   Uncertainty Quantification and Error Estimation
@@ -10,6 +10,9 @@
 %   reduced-order      Reduced Order Modeling
 %   finite-element     Finite Element Method for PDEs
 %   lattice-boltzmann  Lattice Boltzmann Methods
+%
+% category = {miscellaneous} moves an entry to the "Miscellaneous" list on
+% the Publications page instead of "Preprints".
 %
 % Entries are newest first. Preprints come first, then journal articles,
 % conference papers and the PhD thesis.
@@ -30,7 +33,7 @@
 
 @misc{chaudhry2025adjoint,
   author        = {Chaudhry, Jehanzeb H. and Lewis, Owen and Molla, Md Al Amin},
-  title         = {Adjoint-based a Posteriori Error Analysis for Semi-explicit Index-1 and {H}essenberg Index-2 Differential-Algebraic Equations},
+  title         = {Adjoint-based A Posteriori Error Analysis for Semi-explicit Index-1 and {H}essenberg Index-2 Differential-Algebraic Equations},
   year          = {2025},
   eprint        = {2507.03712},
   archiveprefix = {arXiv},
@@ -45,7 +48,8 @@
   eprint        = {2206.02905},
   archiveprefix = {arXiv},
   note          = {Preprint},
-  keywords      = {error-estimation}
+  keywords      = {error-estimation},
+  category      = {miscellaneous}
 }
 
 @misc{bohra2020mass,
@@ -53,7 +57,8 @@
   title         = {Mass Transport in Catalytic Pores of {GDE}-based {CO$_2$} Electroreduction Systems},
   year          = {2020},
   url           = {https://chemrxiv.org/engage/chemrxiv/article-details/60c750b6842e654da7db3a70},
-  note          = {ChemRxiv preprint}
+  note          = {ChemRxiv preprint},
+  category      = {miscellaneous}
 }
 
 % ---------------------------------------------------------------------------
@@ -141,7 +146,7 @@
 
 @article{chaudhry2021mhd,
   author        = {Chaudhry, Jehanzeb H. and Rappaport, Ari E. and Shadid, John N.},
-  title         = {An a Posteriori Error Analysis for the Equations of Stationary Incompressible Magnetohydrodynamics},
+  title         = {An A Posteriori Error Analysis for the Equations of Stationary Incompressible Magnetohydrodynamics},
   journal       = {SIAM Journal on Scientific Computing},
   volume        = {43},
   number        = {2},
@@ -267,7 +272,7 @@
 
 @article{chaudhry2017exploration,
   author        = {Chaudhry, Jehanzeb H. and Estep, Donald and Gunzburger, Max},
-  title         = {Exploration of Efficient Reduced-Order Modeling and a Posteriori Error Estimation},
+  title         = {Exploration of Efficient Reduced-Order Modeling and A Posteriori Error Estimation},
   journal       = {International Journal for Numerical Methods in Engineering},
   volume        = {111},
   pages         = {103},

@@ -25,3 +25,4 @@ plugins:
 # Files that are part of the repository but shouldn't be published.
 exclude:
   - README.md
+  - scripts/

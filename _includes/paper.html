@@ -1,0 +1,8 @@
+<li>
+  <p>
+    {{ include.paper.authors }}.
+    <strong>{{ include.paper.title }}.</strong>
+    {% if include.paper.venue != "" %}{{ include.paper.venue }} ({{ include.paper.year }}){% endif %}
+    {% if include.paper.links.size > 0 %}[{% for link in include.paper.links %}<a href="{{ link.url }}">{{ link.label }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}]{% endif %}
+  </p>
+</li>
