@@ -1,0 +1,299 @@
+---
+redirect_from: /math578fa16.html
+---
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Math 578 - Fall 2016</title>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1 ALIGN=CENTER>MATH 578: Numerical Partial Differential Equations
+</h1>
+
+<HR WIDTH="100%"><BR>
+<B>Time and Place:</B> Tuesday/Thursday 11:00 am - 12:15 pm, MITCH 121
+<BR>
+<B>Instructor:</B> Jehanzeb H. Chaudhry (Zeb),
+jehanzeb@unm.edu, 
+<a href= "../../index.html"> jehanzebchaudhry.github.io</a>
+<BR>
+<B>Office Hours:</B> Tuesday: 1:30 - 3:00 pm, Wednesday: 9:00 - 10:30 am (SMLC 328)
+<BR>
+<BR>
+<BR>
+
+
+<B>Texts Recommended (not required):</B> 
+        
+   <h4> * Notes on all methods</h4>
+   <ul>
+  <li> Introduction to Computational PDEs by de Sterck, Ullrich. 
+  <a href="http://www.math.uwaterloo.ca/~hdesterc/websiteW/teaching/AM442CM452.pdf" role="button">link to pdf</a></li>
+  </ul>
+
+  <h4>*  Finite Difference Methods</h4>
+  <ul>
+
+<li>Finite Difference Methods for Ordinary and Partial Differential Equations: Steady-State and Time-Dependent Problems, by LaVeque  <a href="http://epubs.siam.org/doi/book/10.1137/1.9780898717839">SIAM</a></li>
+
+
+<li>Numerical Solution of Partial Differential Equations, by Morton and Mayers
+ <a href="http://www.cambridge.org/us/academic/subjects/mathematics/numerical-analysis/numerical-solution-partial-differential-equations-introduction-2nd-edition"> Cambridge</a></li>
+</ul>
+
+<h4>*  Finite Volume Methods</h4>
+
+<ul>
+  <li>Finite Volume Methods for Hyperbolic Problems, by LeVeque <a  href="http://www.cambridge.org/us/academic/subjects/mathematics/numerical-analysis/finite-volume-methods-hyperbolic-problems?format=PB" role="button">SIAM</a></li>
+
+</ul>
+
+
+<h4>*  Finite Element Methods</h4>
+
+<ul>
+<li>  Theory, Fast Solvers, and Applications in Solid Mechanics, by Braess<a href="http://ebooks.cambridge.org/ebook.jsf?bid=CBO9780511618635">Cambridge</a></li>
+
+  <li>The Mathematical Theory of Finite Element Methods, Third edition, by Brenner and Scott <a  href="http://www.springer.com/mathematics/applications/book/978-0-387-75933-3" role="button">Springer</a></li>
+
+
+  <li>Numerical Solution of Partial Differential Equations by the Finite Element Method, by Johnson<a href="http://store.doverpublications.com/048646900x.html">Dover</a></li>
+
+  <li>The FEniCS Book, Automated Solution of Differential Equations by the Finite Element Method, eds. Logg,  Mardal, and  Wells <a  href="http://launchpad.net/fenics-book/trunk/final/+download/fenics-book-2011-10-27-final.pdf" role="button">link to pdf</a></li>
+
+</ul>
+
+
+
+ <BR>
+<B>Prerequisites:</B> Math 463/513, Math 504, Math 505
+<BR>
+</P>
+
+<DL>
+<P><B>Course Description:</B> &nbsp;
+This course covers the basics of finite difference schemes, finite volume schemes, and finite element
+methods. Additional topics (e.g. a posteriori error estimation, discontinuous Galerkin methods, etc) may be covered based on student interest and time constraints.You do not need to be an expert in PDEs or in coding. But you should have a course in numerical analysis
+as your background, be comfortable with differential equations, and have some coding experience. We'll be covering numerical methods for parabolic, hyperbolic and elliptic equations. We'll discuss the mathematical background of the numerical methods as well as its implementation. </P>
+
+<BR>
+<P><B> Computation </B>
+
+<BR> <h4>*Python</h4>
+
+I'll be using Python for the examples in class. The course homeworks and examples in class will be in <a href="http://python.org"> Python </a> with the libraries  <a href="http://docs.scipy.org/doc/numpy/user/">numpy</a>, <a href="http://docs.scipy.org/doc/scipy/reference/">
+scipy</a> and <a href="http://matplotlib.org/"> matplotlib</a>  for assignments.  Python has a very gentle learning curve, so you should feel at home even if
+you've never done any work in Python. While it is possible to do the finite difference HW's in MATLAB, I highly recommend you do these in Python, since Python will be needed once we move to the Finite Element package Dolfin from the <a href="https://fenicsproject.org/index.html"> FEniCS Project</a>.
+
+<BR> <h4>*Python and Numpy Help</h4>
+<ul>
+<li>Python tutorial <a href="ttps://docs.python.org/3/tutorial/index.html">(https://docs.python.org/3/tutorial/index.html)</a></li>
+
+<li>Facts and myths about Python names and values <a href="http://nedbatchelder.com/text/names.html">(http://nedbatchelder.com/text/names.html)</a></li>
+
+<li>Dive into Python 3 <a href="http://www.diveinto.org/python3/">(http://www.diveinto.org/python3/)</a></li>
+
+<li>Project Euler <a href="https://projecteuler.net/problems">(https://projecteuler.net/problems)</a> (Lots of practice problems)</li>
+
+<li>Introduction to Python for Science <a href="https://github.com/djpine/pyman">(https://github.com/djpine/pyman)</a></li>
+
+<li>The SciPy lectures <a href="http://scipy­lectures.github.io/">(http://scipy­lectures.github.io/)</a></li>
+
+<li>The Numpy MedKit <a href="http://mentat.za.net/numpy/numpy_advanced_slides/">(http://mentat.za.net/numpy/numpy_advanced_slides/)</a> </li>
+
+<li>The Numpy User Guide <a href="http://web.mit.edu/dvp/Public/numpybook.pdf">(http://web.mit.edu/dvp/Public/numpybook.pdf) </a>by Travis Oliphant</li>
+
+<li>Numpy/Scipy documentation <a href="http://docs.scipy.org/doc/">(http://docs.scipy.org/doc/)</a></li>
+
+<li> More in this reddit thread
+<a href="http://www.reddit.com/r/Python/comments/1lgxbf/best_tutorial_to_learn_numpy/">(http://www.reddit.com/r/Python/comments/1lgxbf/best_tutorial_to_learn_numpy/)</a></li>
+
+<li>Spyder <a href="https://github.com/spyder­ide/spyder)</a> (a Python IDE, like Matlab">(https://github.com/spyder­ide/spyder)</a> (a Python IDE, like Matlab) </li>
+
+<li>An introduction to Numpy and SciPy <a href="http://www.engr.ucsb.edu/~shell/che210d/numpy.pdf">(http://www.engr.ucsb.edu/~shell/che210d/numpy.pdf)</a></li>
+
+<li>100 Numpy exercises <a href="http://www.loria.fr/~rougier/teaching/numpy.100/index.html)">(http://www.loria.fr/~rougier/teaching/numpy.100/index.html)</a></li>
+
+
+
+
+</li>
+
+</ul>
+
+</P>
+
+
+
+
+<P>
+<BR> <h4>*Virtual Machine</h4>
+<a href= "fa16/math578/mathgeeks.ova">Virtual Box Image</a> Username: mathgeeks  Password: abc123
+
+</P>
+
+
+
+
+<P><B>Grading:</B> &nbsp;
+<BR> 45% Homework
+<BR> 45% Projects
+<BR> 10% Participation
+
+</P>
+
+
+<P><B>Homeworks:</B> 
+<BR> <a href= "fa16/math578/hw0.pdf">Homework 0</a> 
+
+<BR> <a href= "fa16/math578/HW1.pdf">Homework 1</a> Due: September 13 
+<BR>Update 1: Sept 2nd. Added domain for Problem 1. Added a bonus problem.
+<a href= "fa16/math578/parabolic_crank_nicolson_boundary_conditions.py">Solution Code</a>
+
+<BR> <a href= "fa16/math578/HW2.pdf">Homework 2</a> Due:  <del>September 27</del> <ins>September 29</ins>
+<BR>Update 1: Sept 20th. Fixed missing negative sign on RHS in Problem 5.
+<BR>Update 2: Sept 26th. Due Date changed to Sept 29.
+
+<a href= "fa16/math578/parabolic_non_linear.py">parabolic_non_linear.py</a>&nbsp;
+
+<a href= "fa16/math578/cn_2d_neumann.py">cn_2d_neumann.py</a>
+
+ 
+
+
+<BR> <a href= "fa16/math578/HW3.pdf">Homework 3</a> Due:  October 11
+<BR>Update 1: Oct 6th. Fixed sign issue in problem 3, equation numbered 2.
+<a href= "fa16/math578/hw3_fd.py">hw3_fd</a>
+<a href= "fa16/math578/hw3_fv.py">hw3_fv</a>
+
+
+<BR> <a href= "fa16/math578/HW4.pdf">Homework 4</a> Due:  November 3
+
+<BR> <a href= "fa16/math578
+/HW5.pdf">Homework 5</a> Due:  November 24 &nbsp;
+<a href= "fa16/math578/elements.dat">elements.dat</a>&nbsp;
+<a href= "fa16/math578/vertices.dat">vertices.dat</a>&nbsp;
+<a href= "fa16/math578/dom.xml">dom.xml</a>&nbsp;
+<a href= "fa16/math578/dom_physical_region.xml">dom_physical_region.xml</a>
+
+
+</P>
+
+
+<P><B>Projects:</B> 
+<BR> <a href= "fa16/math578/midterm_project.pdf">
+Midtem Project</a> Due:  November 8. You can work in groups of 2.&nbsp;
+<a href= "fa16/math578/midterm_project_lax_wendroff_2d.pdf">
+Addendum</a> 
+
+<BR> <a href= "fa16/math578/final_project.pdf">
+Final Project</a> Due:  December 13. You can work in groups of 2.&nbsp;
+</P>
+
+<P><B><a href= "fa16/math578/Syllabus_578.pdf">Syllabus</a></B> &nbsp;
+</P>
+
+<P>
+<BR> <h4>Sample files/ Class Examples</h4>
+ <a href= "fa16/math578/numpy_matplotlib_example.py">numpy_matplotlib_example</a> &nbsp;
+<a href= "fa16/math578/parabolic_forward_euler.py">explicit scheme for heat equation</a>&nbsp;
+<a href= "fa16/math578/parabolic_forward_euler_explicit_matrix.py">explicit scheme for heat equation with mat-vec operations</a>&nbsp;
+<a href= "fa16/math578/MOL.py">Method of Lines Example</a>&nbsp;
+<BR>
+<a href= "fa16/math578/1d_fem.py">1D FEM</a>&nbsp;
+<a href= "fa16/math578/1d_fem_dolfin.py">1D FEM in Dolfin</a>&nbsp;
+<a href= "fa16/math578/1dmesh.xml">1D FEM mesh (needed for Dolfin example)</a>&nbsp;
+
+</P>
+
+
+<P><B>Handwritted and probably illegible notes:</B> 
+<a href= "fa16/math578/lectures_1-3.pdf">1-3</a>&nbsp;
+<a href= "fa16/math578/lectures_4-6.pdf">4-6</a>&nbsp;
+<a href= "fa16/math578/fem-1.pdf">FEM-1</a>&nbsp;
+<a href= "fa16/math578/fem_2.pdf">FEM-2</a>&nbsp;
+</P>
+
+
+<P>
+<BR> <h4>
+<a name="finalproject">Final Project Presentations: December 13</a>
+</h4>
+
+<table>
+  <tr>
+    <th width="15%">Time</th>
+    <th>Title</th>
+    <th>Presenter(s)</th>
+  </tr>
+  <tr>
+    <td >12:30</td>
+    <td>Stokes Flow through a Backward Facing Step </td>
+    <td>Robert Malakhov</td>
+  </tr>
+  <tr>
+    <td>12:45</td>
+    <td>Adjoint Based Error Estimation and Mesh Refinement</td>
+    <td>Juan Diego Colmenares Fernandez</td>
+  </tr>
+  <tr>
+    <td>1:00</td>
+    <td>Using proper orthogonal decomposition to obtain solution from a parametrized partial differential equation</td>
+    <td>Joel Upston</td>
+  </tr>
+  <tr>
+    <td>1:15</td>
+    <td>Comparison of Least Squares and Mixed Method for Stationary 2D Convection-Diffusion Equation</td>
+    <td>Shu Wang and Anastassiya Semenova</td>
+  </tr>
+  <tr>
+    <td>1:30</td>
+    <td>Clement's Interpolation</td>
+    <td>Adam Frederickson</td>
+  </tr>
+  <tr>
+    <td>1:45</td>
+    <td>Hermite interpolation method on the overset grids</td>
+    <td>Oleksii Beznosov</td>
+  </tr>
+  <tr>
+    <td>2:00</td>
+    <td>Petro-Galerkin 3-Dimensional Burgers Equation </td>
+    <td>Brad Philipbar</td>
+  </tr>
+</table>
+
+</P>
+
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+</body>
+</html>

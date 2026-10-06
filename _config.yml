@@ -18,7 +18,10 @@ author:
     - 310 SMLC
     - Albuquerque, NM 87131
 
+# Lets moved pages keep working at their old addresses (see redirect_from in each page).
+plugins:
+  - jekyll-redirect-from
+
 # Files that are part of the repository but shouldn't be published.
 exclude:
   - README.md
-  - files/backup_research.txt
