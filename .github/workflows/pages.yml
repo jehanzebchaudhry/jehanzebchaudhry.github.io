@@ -7,7 +7,7 @@ name: Build and deploy site
 
 on:
   push:
-    branches: [main, bib-build]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -16,7 +16,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages-${{ github.ref }}
+  group: pages
   cancel-in-progress: false
 
 jobs:
